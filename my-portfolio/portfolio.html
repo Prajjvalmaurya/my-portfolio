@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajjval-Web Developer Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Prajjval Maurya</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView(true)">Get In Touch</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Prajjval 👨‍💻</h1>
+            <p>A passionate web developer crafting beautiful, responsive, and user-centric digital experiences</p>
+            <div class="hero-buttons">
+                <button class="cta-button" onclick="document.getElementById('projects').scrollIntoView(true)">View My Work</button>
+                <a href="#contact" class="secondary-button">Let's Talk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about">
+            <p>
+                I'm a dedicated web developer with a passion for creating stunning, functional websites that deliver exceptional user experiences. With expertise in HTML, CSS, and JavaScript, I transform ideas into reality.
+            </p>
+            <p>
+                My journey in web development has been driven by a love for problem-solving and continuous learning. I believe in writing clean, maintainable code and staying updated with the latest web technologies and best practices.
+            </p>
+            <p>
+                When I'm not coding, you'll find me exploring new web technologies, contributing to open-source projects, or sharing knowledge with the developer community. I'm always eager to take on new challenges and collaborate with creative minds.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>🎨 Frontend Development</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>⚙️ Programming</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">DOM Manipulation</span>
+                    <span class="skill-tag">ES6+</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">Problem Solving</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>🎯 Web Design</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">UI/UX Principles</span>
+                    <span class="skill-tag">Animations</span>
+                    <span class="skill-tag">Accessibility</span>
+                    <span class="skill-tag">Web Performance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">🎮</div>
+                <div class="project-content">
+                    <h3>Guess The Number Game</h3>
+                    <p>An interactive number guessing game with difficulty levels, real-time feedback, and score tracking.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../guessthenumgame.js" class="live">View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">⭕</div>
+                <div class="project-content">
+                    <h3>Tic Tac Toe</h3>
+                    <p>A classic Tic Tac Toe game with AI opponent, move validation, and win detection logic.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../tictactoe.html" class="live">Play Game</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🏔️</div>
+                <div class="project-content">
+                    <h3>Igloo Clone</h3>
+                    <p>A responsive website clone project showcasing modern web design principles and layout techniques.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">Responsive</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../igloo-clone/index.html" class="live">View Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🎨</div>
+                <div class="project-content">
+                    <h3>Web Game Platform</h3>
+                    <p>A multi-game platform featuring interactive games with polished UI and smooth animations.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">Interactive</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../game.html" class="live">Explore</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">💻</div>
+                <div class="project-content">
+                    <h3>Web Development Projects</h3>
+                    <p>A collection of web projects demonstrating HTML structure, CSS styling, and JavaScript functionality.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">Multiple Projects</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../htmlbestproject.html" class="live">View</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🚀</div>
+                <div class="project-content">
+                    <h3>Interactive Web Experiences</h3>
+                    <p>Creative web experiences combining HTML, CSS, and JavaScript for engaging user interactions.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../script.js" class="live">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Let's Work Together</h2>
+        <div class="contact">
+            <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out if you'd like to collaborate or just want to say hello!</p>
+            <div class="contact-links">
+                <a href="mailto:prajjvalmaurya17@gmail.com" class="contact-link">📧 Email Me</a>
+                <a href="https://github.com/Prajjvalmaurya" target="_blank" class="contact-link">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/prajjval-maurya-378083308/" target="_blank" class="contact-link">🔗 LinkedIn</a>
+                <a href="https://twitter.com" target="_blank" class="contact-link">𝕏 Twitter</a>
+            </div>
+            <button class="cta-button" onclick="alert('Thank you for your interest! Please update the email link with your actual contact information.')">Send Me A Message</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Prajjval. All rights reserved. Crafted with 💜 and passion for web development.</p>
+    </footer>
+</body>
+</html>

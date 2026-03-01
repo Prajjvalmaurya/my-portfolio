@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.status {
+    font-size: 1.3em;
+    color: #667eea;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px auto;
+    background: #667eea;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border: none;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: #667eea;
+}
+
+.cell:hover {
+    background: #f0f0f0;
+    transform: scale(0.95);
+}
+
+.cell:active {
+    transform: scale(0.9);
+}
+
+.cell.x {
+    color: #764ba2;
+}
+
+.cell.o {
+    color: #667eea;
+}
+
+.reset-btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.reset-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+.reset-btn:active {
+    transform: translateY(0);
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+.score div {
+    color: #333;
+}
+
+.score span {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 1.5em;
+}
