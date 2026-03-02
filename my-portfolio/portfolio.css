@@ -1,9 +1,17 @@
+/* ---------------------------------------------------------------------------
+   Reset and box-sizing for all elements
+   Removes default margins/padding and makes width calculations predictable
+   --------------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ---------------------------------------------------------------------------
+   CSS custom properties (variables) for consistent theming
+   Changing a value here updates colors across the site
+   --------------------------------------------------------------------------- */
 :root {
     --primary-color: #6366f1;
     --secondary-color: #8b5cf6;
@@ -15,6 +23,10 @@
     --border-color: #334155;
 }
 
+/* ---------------------------------------------------------------------------
+   Base page styles applied to <body>
+   Sets font, background, text color and prevents horizontal scrolling
+   --------------------------------------------------------------------------- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--dark-bg);
@@ -23,7 +35,11 @@ body {
     overflow-x: hidden;
 }
 
+/* ---------------------------------------------------------------------------
+   Navigation bar and related elements
+   --------------------------------------------------------------------------- */
 /* Navigation */
+/* main navigation bar that sticks to top */
 nav {
     position: fixed;
     top: 0;
@@ -38,6 +54,7 @@ nav {
     border-bottom: 1px solid var(--border-color);
 }
 
+/* site logo text with gradient coloring */
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
@@ -47,12 +64,14 @@ nav {
     background-clip: text;
 }
 
+/* container for nav links, laid out with flexbox */
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
+/* individual link styles inside nav */
 .nav-links a {
     color: var(--text-primary);
     text-decoration: none;     
@@ -60,10 +79,12 @@ nav {
     font-weight: 500;
 }
 
+/* hover effect on nav links */
 .nav-links a:hover {
     color: var(--primary-color);
 }
 
+/* call-to-action button styling used in nav and hero */
 .cta-button {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
@@ -76,11 +97,15 @@ nav {
     font-weight: 600;
 }
 
+/* hover lift and shadow for CTA buttons */
 .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
 }
 
+/* ---------------------------------------------------------------------------
+   Hero (intro) section styling and animations
+   --------------------------------------------------------------------------- */
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -94,6 +119,7 @@ nav {
     overflow: hidden;
 }
 
+/* decorative floating circle (top right) */
 .hero::before {
     content: '';
     position: absolute;
@@ -106,6 +132,7 @@ nav {
     animation: float 20s infinite ease-in-out;
 }
 
+/* decorative floating circle (bottom left) */
 .hero::after {
     content: '';
     position: absolute;
@@ -118,6 +145,7 @@ nav {
     animation: float 25s infinite ease-in-out;
 }
 
+/* inner wrapper holding hero text and buttons */
 .hero-content {
     position: relative;
     z-index: 1;
@@ -125,6 +153,7 @@ nav {
     padding: 2rem;
 }
 
+/* main headline in hero with gradient text */
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -135,6 +164,7 @@ nav {
     animation: slideInDown 1s ease-out;
 }
 
+/* paragraph text inside hero */
 .hero p {
     font-size: 1.3rem;
     color: var(--text-secondary);
@@ -142,6 +172,7 @@ nav {
     animation: slideInUp 1s ease-out 0.2s both;
 }
 
+/* container for hero action buttons */
 .hero-buttons {
     display: flex;
     gap: 1rem;
@@ -150,6 +181,7 @@ nav {
     animation: slideInUp 1s ease-out 0.4s both;
 }
 
+/* secondary link styled as button used in hero */
 .secondary-button {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
@@ -160,12 +192,16 @@ nav {
     font-weight: 600;
 }
 
+/* hover styling for secondary button */
 .secondary-button:hover {
     background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
 }
 
+/* ---------------------------------------------------------------------------
+   Keyframe definitions for reusable animations
+   --------------------------------------------------------------------------- */
 /* Animations */
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
@@ -205,6 +241,9 @@ nav {
     }
 }
 
+/* ---------------------------------------------------------------------------
+   General section padding/width and title gradient
+   --------------------------------------------------------------------------- */
 /* Section Styling */
 section {
     padding: 5rem 2rem;
@@ -212,6 +251,7 @@ section {
     margin: 0 auto;
 }
 
+/* title at start of each section with gradient text */
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -222,6 +262,9 @@ section {
     background-clip: text;
 }
 
+/* ---------------------------------------------------------------------------
+   Styles specific to the About section
+   --------------------------------------------------------------------------- */
 /* About Section */
 .about {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
@@ -231,6 +274,7 @@ section {
     max-width: 900px;
 }
 
+/* paragraphs inside about box */
 .about p {
     font-size: 1.1rem;
     color: var(--text-secondary);
@@ -238,6 +282,9 @@ section {
     line-height: 1.8;
 }
 
+/* ---------------------------------------------------------------------------
+   Styles for the Skills cards and tags
+   --------------------------------------------------------------------------- */
 /* Skills Section */
 .skills-container {
     display: grid;
@@ -246,6 +293,7 @@ section {
     margin-bottom: 3rem;
 }
 
+/* individual skill card styling */
 .skill-card {
     background: var(--card-bg);
     padding: 2rem;
@@ -255,6 +303,7 @@ section {
     animation: fadeInScale 0.6s ease-out;
 }
 
+/* hover effect for skill cards */
 .skill-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary-color);
@@ -267,12 +316,14 @@ section {
     font-size: 1.3rem;
 }
 
+/* flex container for tags inside skill card */
 .skill-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.7rem;
 }
 
+/* pill-shaped tag for each skill */
 .skill-tag {
     background: rgba(99, 102, 241, 0.2);
     color: var(--primary-color);
@@ -282,6 +333,9 @@ section {
     border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
+/* ---------------------------------------------------------------------------
+   Styles for project cards, images and links
+   --------------------------------------------------------------------------- */
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -289,6 +343,7 @@ section {
     gap: 2rem;
 }
 
+/* individual project card */
 .project-card {
     background: var(--card-bg);
     border-radius: 15px;
@@ -298,12 +353,14 @@ section {
     animation: fadeInScale 0.6s ease-out;
 }
 
+/* hover lift for project card */
 .project-card:hover {
     transform: translateY(-15px);
     border-color: var(--accent-color);
     box-shadow: 0 25px 60px rgba(236, 72, 153, 0.2);
 }
 
+/* colored header block of a project card */
 .project-image {
     width: 100%;
     height: 200px;
@@ -315,22 +372,26 @@ section {
     color: white;
 }
 
+/* content area (text) inside project card */
 .project-content {
     padding: 2rem;
 }
 
+/* heading within project content */
 .project-content h3 {
     color: var(--text-primary);
     margin-bottom: 0.7rem;
     font-size: 1.3rem;
 }
 
+/* descriptive paragraph inside project card */
 .project-content p {
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
 }
 
+/* wrapper for technology tags in project */
 .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -338,6 +399,7 @@ section {
     margin-bottom: 1.5rem;
 }
 
+/* individual tech tag on project card */
 .project-tag {
     background: rgba(236, 72, 153, 0.2);
     color: var(--accent-color);
@@ -346,11 +408,13 @@ section {
     font-size: 0.8rem;
 }
 
+/* container for project action links (live/code) */
 .project-links {
     display: flex;
     gap: 1rem;
 }
 
+/* style for buttons inside project links */
 .project-links a {
     flex: 1;
     text-align: center;
@@ -362,25 +426,32 @@ section {
     font-weight: 600;
 }
 
+/* live-demo link background color */
 .project-links .live {
     background: var(--primary-color);
     color: white;
 }
 
+/* hover for live link */
 .project-links .live:hover {
     background: var(--secondary-color);
 }
 
+/* code link border style */
 .project-links .code {
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
 }
 
+/* hover for code link */
 .project-links .code:hover {
     background: var(--primary-color);
     color: white;
 }
 
+/* ---------------------------------------------------------------------------
+   Contact section box and link hover effects
+   --------------------------------------------------------------------------- */
 /* Contact Section */
 .contact {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
@@ -391,12 +462,14 @@ section {
     margin: 0 auto;
 }
 
+/* paragraph inside contact section */
 .contact p {
     font-size: 1.1rem;
     color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
+/* flex container for contact links/icons */
 .contact-links {
     display: flex;
     justify-content: center;
@@ -405,6 +478,7 @@ section {
     margin-bottom: 2rem;
 }
 
+/* individual link in contact area */
 .contact-link {
     color: var(--primary-color);
     text-decoration: none;
@@ -415,11 +489,15 @@ section {
     gap: 0.5rem;
 }
 
+/* hover behaviour for contact link */
 .contact-link:hover {
     color: var(--accent-color);
     transform: translateX(5px);
 }
 
+/* ---------------------------------------------------------------------------
+   Footer background and text color
+   --------------------------------------------------------------------------- */
 /* Footer */
 footer {
     background: var(--card-bg);
@@ -429,6 +507,9 @@ footer {
     color: var(--text-secondary);
 }
 
+/* ---------------------------------------------------------------------------
+   Responsive adjustments for screens narrower than 768px
+   --------------------------------------------------------------------------- */
 /* Responsive */
 @media (max-width: 768px) {
     nav {
@@ -466,11 +547,17 @@ footer {
     }
 }
 
+/* ---------------------------------------------------------------------------
+   Global smooth scrolling for anchor links
+   --------------------------------------------------------------------------- */
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
+/* ---------------------------------------------------------------------------
+   Custom scrollbar colors matching the theme (WebKit only)
+   --------------------------------------------------------------------------- */
 /* Scrollbar styling */
 ::-webkit-scrollbar {
     width: 10px;
