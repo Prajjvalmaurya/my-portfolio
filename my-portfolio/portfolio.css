@@ -575,3 +575,8 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
 }
+h1 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-top: 2rem;
+}
