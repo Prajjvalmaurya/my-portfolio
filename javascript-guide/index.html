@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Mastery Guide: From Beginner to Pro</title>
+    <link rel="stylesheet" href="guide-styles.css">
+</head>
+<body>
+    <h1>JavaScript Mastery Guide: From Beginner to Pro</h1>
+    <p>This guide covers JavaScript from basics to advanced concepts with examples and projects. Open this file in a browser to interact with the code.</p>
+
+    <h2>1. Beginner Level: Basics</h2>
+    <h3>Variables and Data Types</h3>
+    <p>JavaScript variables store data. Use <code>let</code>, <code>const</code>, or <code>var</code>.</p>
+    <pre><code>// Variables
+let name = "John"; // String
+const age = 25; // Number
+var isStudent = true; // Boolean
+
+// Data types: string, number, boolean, undefined, null, object, symbol
+console.log(typeof name); // "string"</code></pre>
+
+    <h3>Operators</h3>
+    <pre><code>// Arithmetic
+let sum = 5 + 3; // 8
+let diff = 5 - 3; // 2
+
+// Comparison
+console.log(5 > 3); // true
+console.log(5 === "5"); // false (strict equality)
+
+// Logical
+console.log(true && false); // false
+console.log(true || false); // true</code></pre>
+
+    <h3>Control Structures</h3>
+    <pre><code>// If-else
+if (age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+
+// Loops
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+let count = 0;
+while (count < 3) {
+    console.log(count);
+    count++;
+}</code></pre>
+
+    <h2>2. Intermediate Level: Functions and Objects</h2>
+    <h3>Functions</h3>
+    <pre><code>// Function declaration
+function greet(name) {
+    return "Hello, " + name;
+}
+
+// Arrow function (ES6)
+const greetArrow = (name) => "Hello, " + name;
+
+// Function call
+console.log(greet("Alice")); // "Hello, Alice"</code></pre>
+
+    <h3>Objects and Arrays</h3>
+    <pre><code>// Object
+let person = {
+    name: "Bob",
+    age: 30,
+    greet: function() {
+        return "Hi, I'm " + this.name;
+    }
+};
+console.log(person.greet()); // "Hi, I'm Bob"
+
+// Array
+let fruits = ["apple", "banana", "orange"];
+fruits.push("grape");
+console.log(fruits[1]); // "banana"</code></pre>
+
+    <h2>3. DOM Manipulation</h2>
+    <p>The DOM is the structure of HTML elements. JavaScript can change it.</p>
+    <pre><code>// Select elements
+let button = document.getElementById("myButton");
+let paragraphs = document.querySelectorAll("p");
+
+// Change content
+button.textContent = "Clicked!";
+
+// Add event listener
+button.addEventListener("click", function() {
+    alert("Button clicked!");
+});</code></pre>
+
+    <h2>4. Advanced Level: Closures, Prototypes, Async</h2>
+    <h3>Closures</h3>
+    <p>Functions remember their outer scope.</p>
+    <pre><code>function outer() {
+    let count = 0;
+    return function inner() {
+        count++;
+        return count;
+    };
+}
+let counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2</code></pre>
+
+    <h3>Prototypes and Classes</h3>
+    <pre><code>// Constructor function
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.greet = function() {
+    return "Hello, " + this.name;
+};
+
+// ES6 Class
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        return this.name + " makes a sound";
+    }
+}</code></pre>
+
+    <h3>Asynchronous JavaScript</h3>
+    <pre><code>// Promises
+let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Done!"), 1000);
+});
+promise.then(result => console.log(result));
+
+// Async/Await
+async function fetchData() {
+    try {
+        let response = await fetch("https://api.example.com/data");
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error);
+    }
+}</code></pre>
+
+    <h3>ES6+ Features</h3>
+    <pre><code>// Template literals
+let name = "Alice";
+console.log(`Hello, ${name}!`); // "Hello, Alice!"
+
+// Destructuring
+let [a, b] = [1, 2];
+let {x, y} = {x: 10, y: 20};
+
+// Spread operator
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
+
+// Arrow functions (already shown)
+const add = (a, b) => a + b;</code></pre>
+
+    <h3>Error Handling</h3>
+    <pre><code>try {
+    let result = riskyOperation();
+    console.log(result);
+} catch (error) {
+    console.error("An error occurred:", error.message);
+} finally {
+    console.log("This always runs");
+}</code></pre>
+
+    <h3>Regular Expressions</h3>
+    <pre><code>// Create regex
+let regex = /hello/i; // Case-insensitive
+let regex2 = new RegExp("world", "g"); // Global
+
+// Test and match
+console.log(regex.test("Hello World")); // true
+console.log("Hello World".match(regex)); // ["Hello"]
+
+// Replace
+let str = "Hello World";
+console.log(str.replace(/world/i, "Universe")); // "Hello Universe"</code></pre>
+
+    <h3>Browser APIs</h3>
+    <pre><code>// Local Storage
+localStorage.setItem("name", "John");
+console.log(localStorage.getItem("name")); // "John"
+
+// Geolocation
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position => {
+        console.log(position.coords.latitude, position.coords.longitude);
+    });
+}
+
+// Timers
+setTimeout(() => console.log("Delayed"), 1000);
+let interval = setInterval(() => console.log("Repeated"), 500);
+clearInterval(interval);</code></pre>
+
+    <h3>Modules (ES6)</h3>
+    <pre><code>// In module.js
+export const PI = 3.14159;
+export function circleArea(radius) {
+    return PI * radius * radius;
+}
+
+// In main.js
+import { PI, circleArea } from './module.js';
+console.log(circleArea(5));</code></pre>
+
+    <h2>Small Projects</h2>
+
+    <div class="project">
+        <h3>Project 1: Simple Calculator</h3>
+        <input type="number" id="num1" placeholder="Number 1">
+        <input type="number" id="num2" placeholder="Number 2">
+        <button onclick="calculate()">Calculate Sum</button>
+        <div id="calcOutput"></div>
+    </div>
+
+    <div class="project">
+        <h3>Project 2: Todo List</h3>
+        <input type="text" id="todoInput" placeholder="Add a task">
+        <button onclick="addTodo()">Add</button>
+        <ul id="todoList"></ul>
+    </div>
+
+    <div class="project">
+        <h3>Project 3: Random Quote Generator</h3>
+        <button onclick="generateQuote()">Generate Quote</button>
+        <div id="quoteOutput"></div>
+    </div>
+
+    <div class="project">
+        <h3>Project 4: Weather App (Mock)</h3>
+        <input type="text" id="cityInput" placeholder="Enter city">
+        <button onclick="getWeather()">Get Weather</button>
+        <div id="weatherOutput"></div>
+    </div>
+
+    <div class="project">
+        <h3>Project 5: Number Guessing Game</h3>
+        <p>Guess a number between 1 and 100</p>
+        <input type="number" id="guessInput" min="1" max="100">
+        <button onclick="checkGuess()">Guess</button>
+        <div id="guessOutput"></div>
+    </div>
+
+    <div class="project">
+        <h3>Project 6: Simple Drawing App</h3>
+        <canvas id="canvas" width="400" height="300" style="border:1px solid #000;"></canvas><br>
+        <button onclick="clearCanvas()">Clear</button>
+    </div>
+
+    <h2>Conclusion</h2>
+    <p>This guide covers the essentials of JavaScript. Practice regularly, build projects, and explore frameworks like React or Node.js for advanced development. Happy coding!</p>
+    <script src="guide-script.js"></script>
+</body>
+</html>

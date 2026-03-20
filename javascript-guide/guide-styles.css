@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; }
+h1, h2, h3 { color: #333; }
+code { background-color: #e7e7e7; padding: 2px 4px; border-radius: 4px; }
+pre { background-color: #e7e7e7; padding: 10px; border-radius: 4px; overflow-x: auto; }
+.project { border: 1px solid #ccc; padding: 10px; margin: 10px 0; background-color: #fff; }
+button { padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+button:hover { background-color: #45a049; }
+input, textarea { padding: 8px; margin: 5px; }
+#output { margin-top: 10px; padding: 10px; background-color: #fff; border: 1px solid #ccc; }
